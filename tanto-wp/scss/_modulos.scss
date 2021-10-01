@@ -1,0 +1,1263 @@
+.titulo-home{
+  @include flex;
+  width: 100%;
+  background-color: #024A67;
+  .texto{
+    padding: 22% 5%;
+    p{
+      color: white;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+}
+.sobre-nos{
+  margin-top: -9px;
+
+  @include flex;
+  background: url(../imgs/fundo-sobre-home.png) no-repeat;
+  background-size: cover; background-position: left top;
+  .image{
+    padding-top: 7%;
+    width: 30%;
+    margin: 0 auto;
+    img{
+      width: 103px;
+      height: auto;
+      margin: 0 auto;
+      @include breakpoint($desktop){
+        width: 132px;
+      }
+    }
+  }
+  .texto{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 7%;
+    p{
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 25px;
+      color: white;
+      @include breakpoint($desktop){
+      font-size: 21px;
+      line-height: 40px;
+      }
+
+      }
+
+  }
+  .botao{
+
+    width: 26%;
+    margin: 0 auto;
+    padding: 7% 0;
+    @include breakpoint($desktop){
+      width: 75%;
+    }
+    a{
+      display: block;
+      margin: 0 auto;
+      background-color: #F7F4E8;
+      color: #E55242;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 6px;
+      @include breakpoint($desktop){
+        font-size: 16px;
+        margin: 0 42%;
+        padding: 15px;
+        text-align: center;
+      }
+    }
+  }
+
+
+}
+.fazemos{
+  @include flex;
+  background-color: rgba(247, 244, 232, 0.5);
+  .texto{
+      width: 100%;
+      padding-top: 7%;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color: #003C56;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+    }
+  }
+  .servicos{
+    padding: 7% 0;
+    @include flex;
+    width: 90%;
+    margin: 0 auto;
+    .box-servico{
+      padding: 5%;
+      width: 20%;
+      img{
+        width: 44px;
+        height: auto;
+        margin: 0 auto;
+        padding-bottom: 23px;
+
+        @include breakpoint($desktop){
+          width: 66px;
+        }
+      }
+      p{
+        font-family: Monument Extended;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 30px;
+        text-align: center;
+        text-decoration-line: underline;
+        color: #003C56;
+        text-transform: uppercase;
+        @include breakpoint($desktop){
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+.destaques{
+  padding-bottom: 10%;
+  .botaozin{
+    background: #003C56;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 16px;
+    margin: 0 auto;
+    display: block;
+    width: 22%;
+    padding: 1%;
+    text-align: center;
+    @include breakpoint($desktop){
+      font-size: 16px;
+      width: 13%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .texto{
+    padding: 7% 0;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color: #003C56;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+    }
+  }
+  .blocos{
+    padding-bottom: 5%;
+    @include flex;
+    justify-content: space-evenly;
+    .bloco{
+      position: relative;
+      margin-bottom: 3%;
+      width: 95%;
+      overflow: hidden;
+
+      height: 148px;
+     @include breakpoint($medDesktop){
+       margin-bottom: 18px;
+           width: 48%;
+           height: 276px;
+
+     }
+
+      img{
+        transform-origin: 65% 75%;
+        transition: transform 1s, filter .5s ease-out;
+      }
+      .info-bloco{
+        position: absolute;
+        bottom: 13px;
+        left: 10px;
+        z-index: 2;
+        @include breakpoint($desktop){
+          bottom: 36px;
+          left: 24px;
+        }
+        h2{
+          font-family: Monument Extended;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 27px;
+          letter-spacing: 2.5px;
+          color: #FFFFFF;
+          @include breakpoint($desktop){
+            font-size: 30px;
+            line-height: 40px;
+          }
+
+        }
+        p{
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 120%;
+          color: #FFFFFF;
+          text-transform: uppercase;
+          @include breakpoint($desktop){
+            font-size: 20px;
+          }
+        }
+      }
+      &:after{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 80px;
+              z-index: 1;
+              content: '';
+              display: block;
+              border-radius: 4px;
+              transform: rotate(-180deg);
+              background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.53) 44.25%, rgba(255, 255, 255, 0) 100%);
+              background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.53) 44.25%, rgba(255, 255, 255, 0) 100%);
+              background:  linear-gradient(180deg, rgba(0, 0, 0, 0.53) 44.25%, rgba(255, 255, 255, 0) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00202020', endColorstr='#202020',GradientType=0 );
+            }
+    &:hover{
+        img{
+          transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+      }
+    }
+  }
+}
+
+
+.clientes{
+  padding-bottom: 10%;
+  background: rgba(247, 244, 232, 0.5);
+  .texto{
+    padding: 7% 0;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color: #E55242;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+
+    }
+  }
+  .logos{
+    width: 53%;
+    margin: 0 auto;
+  }
+}
+.slider{
+  .carrossel{
+    .bloco-car{
+      position: relative;
+      height: 90vh;
+      @include breakpoint($desktop){
+        height: auto;
+
+      }
+      img{
+        height: 90vh;
+        object-fit: cover;
+        @include breakpoint($desktop){
+          height: auto;
+          object-fit: initial;
+        }
+      }
+      .info-bloco{
+        position: absolute;
+
+        right: 25px;
+        top: 62%;
+        z-index: 2;
+        @include breakpoint($desktop){
+          right: 121px;
+          top: 40%;
+        }
+        h2{
+          font-family: Monument Extended;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 25px;
+          color: #F7F4E8;
+          text-align: right;
+          padding-bottom: 23px;
+          @include breakpoint($desktop){
+            font-size: 30px;
+            line-height: 50px;
+          }
+        }
+        p{
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 120%;
+          text-align: right;
+          color: white;
+          padding-bottom: 35px;
+          text-transform: uppercase;
+          @include breakpoint($desktop){
+            font-size: 20px;
+            line-height: 120%;
+          }
+        }
+        a{
+
+          background: rgba(0, 0, 0, 0);
+          border: 1px solid #E55242;
+          padding: 5px;
+          display: block;
+          margin-left: auto;
+          width: 77px;
+          p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            color: #E55242;
+            padding-bottom: 0;
+            align-self: center;
+            text-transform: none;
+          }
+        }
+      }
+      &:after{
+              position: absolute;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              width: 100%;
+              z-index: 1;
+              content: '';
+              display: block;
+              border-radius: 4px;
+              background: -moz-linear-gradient(-90deg, rgba(0, 0, 0, 0.53) 23.25%, rgba(255, 255, 255, 0) 51%);
+              background: -webkit-linear-gradient(-90deg, rgba(0, 0, 0, 0.53) 23.25%, rgba(255, 255, 255, 0) 51%);
+              background:  linear-gradient(-90deg, rgba(0, 0, 0, 0.53) 23.25%, rgba(255, 255, 255, 0) 51%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00202020', endColorstr='#202020',GradientType=0 );
+
+            }
+    }
+  }
+}
+.sobre-topo{
+  background: #F7F4E8;
+  .texto{
+    padding: 7% 0;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color: #003C56;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+
+    }
+  }
+  .descricao{
+    @include flex;
+    width: 85%;
+    margin: 0 auto;
+    p{
+      width: 100%;
+      @include breakpoint($desktop){
+      width: 46%;
+      }
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 22px;
+      color: #003C56;
+      padding-bottom: 5%;
+    }
+  }
+}
+.socios{
+  @include flex;
+  justify-content: space-evenly;
+  margin: 5%;
+  padding-bottom: 5%;
+  .socio{
+    width: 100%;
+    @include flex;
+    @include breakpoint($desktop){
+    width: 100%;
+    }
+    .titulo{
+      width: 100%;
+      @include breakpoint($desktop){
+
+      width: 22%;
+      padding: 1% 4%;
+      }
+      h1{
+        display: block;
+        font-family: Monument Extended;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 133%;
+        letter-spacing: 2.5px;
+        width: 53%;
+        padding-top: 5%;
+        margin: 0 auto;
+        @include breakpoint($desktop){
+        font-size: 30px;
+        }
+      }
+      .circle{
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 182px;
+        shape-outside: circle();
+        margin: 0 auto;
+        @include breakpoint($desktop){
+          width: 224px;
+        }
+        img{
+
+        }
+      }
+    }
+
+    .texto{
+
+      @include flex;
+      width: 100%;
+      @include breakpoint($desktop){
+
+      width: 70%;
+      }
+      p{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        color: #003C56;
+        padding: 4%;
+        width: 100%;
+        @include breakpoint($desktop){
+
+        width: 40%;
+        }
+
+      }
+    }
+  }
+  .images{
+        padding-top: 11%;
+    img{
+
+      }
+  }
+}
+
+
+
+//////////////////////
+.trabalhos{
+  padding-bottom: 10%;
+  background: white;
+  .sub-menu-projetos{
+      @include flex;
+      width: 95%;
+      margin: 0 auto;
+      padding-bottom: 5%;
+      @include breakpoint($desktop){
+        height: 73px;
+        width: 70%;
+        padding-bottom: 5%;
+        margin: 0 auto;
+      }
+      nav{
+            width: 100%;
+        ul{
+          @include flex;
+          list-style-type: none;
+          height: 82px;
+          margin: 0;
+
+          li{
+            width: 25%;
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            /* or 24px */
+
+            text-align: center;
+            text-transform: uppercase;
+            color: #003C56;
+            align-self: center;
+            cursor: pointer;
+
+            &.active{
+              text-decoration: underline;
+
+            }
+
+            @include breakpoint($desktop){
+              font-size: 20px;
+              width: 9%;
+            }
+          }
+
+        }
+      }
+
+
+    }
+  .texto{
+    padding: 7% 0;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color: #E55242;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+    }
+  }
+  .blocos{
+    padding-bottom: 5%;
+
+    @include flex;
+    justify-content: space-evenly;
+    width: 95%;
+    margin: 0 auto;
+    .bloco{
+      position: relative;
+      margin-bottom: 3%;
+      width: 100%;
+       overflow: hidden;
+
+       height: 148px;
+      @include breakpoint($medDesktop){
+        margin-bottom: 18px;
+            width: 48%;
+            height: 276px;
+
+      }
+
+      img{
+        transform-origin: 65% 75%;
+   transition: transform 1s, filter .5s ease-out;
+
+      }
+      .info-bloco{
+        position: absolute;
+        bottom: 13px;
+        left: 10px;
+        z-index: 2;
+        transition: opacity ease .8s;
+        @include breakpoint($desktop){
+          bottom: 36px;
+          left: 24px;
+        }
+        h2{
+          font-family: Monument Extended;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 27px;
+          letter-spacing: 2.5px;
+          color: #FFFFFF;
+          @include breakpoint($desktop){
+            font-size: 30px;
+            line-height: 40px;
+          }
+
+        }
+        p{
+          font-style: normal;
+          font-weight: 500;
+          font-size: 10px;
+          line-height: 120%;
+          color: #FFFFFF;
+          @include breakpoint($desktop){
+            font-size: 20px;
+          }
+        }
+      }
+      &:hover{
+        img{
+          transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        }
+        .info-bloco{
+          opacity: 0;
+        }
+        &:after{
+          opacity:0;
+        }
+      }
+      &:after{
+              transition: opacity ease .8s;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              opacity: 1;
+              width: 100%;
+              height: 80px;
+              z-index: 1;
+              content: '';
+              display: block;
+              border-radius: 4px;
+              transform: rotate(-180deg);
+              background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0.53) 44.25%, rgba(255, 255, 255, 0) 100%);
+              background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0.53) 44.25%, rgba(255, 255, 255, 0) 100%);
+              background:  linear-gradient(180deg, rgba(0, 0, 0, 0.53) 44.25%, rgba(255, 255, 255, 0) 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00202020', endColorstr='#202020',GradientType=0 );
+
+            }
+
+    }
+  }
+}
+
+///
+.servicos-page{
+  .texto{
+    padding-top: 7%;
+    padding-bottom: 2%;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color: #E55242;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+    }
+  }
+  .descricao{
+    padding-bottom: 2%;
+    p{
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 167% */
+
+      text-align: center;
+
+      color: #003C56;
+      @include breakpoint($desktop){
+        font-size: 24px;
+        line-height: 40px;
+      }
+
+    }
+  }
+  .blocos{
+    @include flex;
+    width: 100%;
+    .bloco{
+        @include flex;
+      width: 85%;
+    margin: 0 auto;
+    justify-content: space-around;
+      .texto{
+        order: 1;
+        width: 100%;
+        padding: 5% 0;
+          align-self: center;
+          @include breakpoint($desktop){
+              width: 40%;
+          }
+        h1{
+          font-family: Monument Extended;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 40px;
+          /* or 167% */
+          text-align: center;
+          letter-spacing: 2.5px;
+          text-transform: lowercase;
+          padding-bottom: 5%;
+          color: #024A67;
+          @include breakpoint($desktop){
+            text-align: left;
+          }
+        }
+        p{
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          /* or 157% */
+          color: #024A67;
+          mix-blend-mode: normal;
+          opacity: 0.8;
+        }
+      }
+      .if-trailer{
+        width: 100%;
+        padding: 7% 0;
+        order: 2;
+        position: relative;
+        cursor: pointer;
+        @include breakpoint($desktop){
+          width: 40%;
+          padding: 1% 0;
+        }
+        iframe{
+          width: 100%;
+          height: 100%;
+
+          }
+          .play{
+            position: absolute;
+            bottom: 16%;
+            width: 84px;
+            left: 37%;
+            display: block;
+            @include breakpoint($desktop){
+              bottom: 29%;
+              width: 121px;
+              display: block;
+              margin: 0 auto;
+            }
+
+
+          }
+      }
+      &:nth-child(2n){
+        .if-trailer{
+          order: 2;
+          @include breakpoint($desktop){
+            order: 1;
+          }
+        }
+        .texto{
+          order: 1;
+          @include breakpoint($desktop){
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+}
+.contato{
+  background: url(../imgs/fundocontato.jpeg) no-repeat;
+  background-size: cover; background-position: left top;
+  width: 100vw;
+  height: 90vh;
+  @include flex;
+  img{
+    width: 100%;
+  }
+  .texto{
+    align-self: center;
+    width: 90%;
+    margin: 0 auto;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    /* or 24px */
+
+    text-align: center;
+
+    color: #F7F4E8;
+    @include breakpoint($desktop){
+      width: 30%;
+    }
+    h1{
+      padding-bottom: 5%;
+    }
+    p{
+      padding-bottom: 5%;
+    }
+    .social{
+      @include flex;
+      width: 40%;
+    margin: 0 auto;
+      img{
+        width: 16px;
+      }
+    }
+  }
+}
+
+
+.trabalhos-single{
+  .image{
+    height: 90vh;
+    @include breakpoint($desktop){
+      height: auto;
+
+    }
+    img{
+      height: 90vh;
+      object-fit: cover;
+      @include breakpoint($desktop){
+        height: auto;
+        object-fit: initial;
+      }
+    }
+  }
+  .sobre{
+    color: #003C56;
+
+    width: 85%;
+    margin: 0 auto;
+    padding: 8% 0;
+    @include breakpoint($desktop){
+      @include flex;
+    }
+    .titulo{
+      width: 100%;
+      padding-bottom: 13%;
+      @include breakpoint($desktop){
+        width: 50%;
+        padding-bottom: 0;
+      }
+      h1{
+        font-family: Monument Extended;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 50px;
+        padding-bottom: 0;
+          @include breakpoint($desktop){
+            padding-bottom: 5%;
+          }
+
+      }
+      h2{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 120%;
+        width: 80%;
+        @include breakpoint($desktop){
+          width: 43%;
+          font-size: 20px;
+        }
+
+      }
+    }
+    .texto{
+      width: 100%;
+      @include breakpoint($desktop){
+        width: 50%;
+      }
+
+      p{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        /* or 144% */
+
+
+
+      }
+    }
+  }
+  .blocos{
+    .bloco{
+      display: block;
+      @include breakpoint($desktop){
+          display: flex;
+      }
+
+      .trailer{
+        order: 1;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        @include breakpoint($desktop){
+            width: 70%;
+        }
+        img{
+
+        }
+        .play{
+          position: absolute;
+          bottom: 16%;
+          width: 84px;
+          left: 37%;
+          @include breakpoint($desktop){
+            bottom: 29%;
+            width: 141px;
+            left: 48%;
+          }
+
+
+        }
+      }
+      .descricao{
+        background: #E55242;
+        width: 100%;
+        @include breakpoint($desktop){
+            width: 30%;
+        }
+        order: 2;
+        display: flex;
+        .diver{
+          align-self: center;
+            margin: 10% 10%;
+          @include breakpoint($desktop){
+              margin: 0px 21%;
+          }
+
+          h1{
+            padding-bottom:5%;
+            font-family: Monument Extended;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 30px;
+            line-height: 50px;
+            color: #FFFFFF;
+            @include breakpoint($desktop){
+              padding-bottom:11%;
+            }
+          }
+          p{
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            /* or 144% */
+
+
+            color: #FFFFFF;
+          }
+        }
+
+      }
+      &:nth-child(2n){
+        .descricao{
+          background:  #024A67;
+          order: 1;
+        }
+        .trailer{
+          order: 2;
+        }
+      }
+      &:nth-child(3n){
+        .descricao{
+          background:   #F7F4E8;
+            h1{
+                color:  #003C56;
+            }
+            p{
+              color:  #003C56;
+            }
+        }
+
+      }
+      &:nth-child(4n){
+        .descricao{
+          background: #E55242;
+            h1{
+                  color: #FFFFFF;
+            }
+            p{
+              color: #FFFFFF;
+            }
+        }
+
+      }
+    }
+  }
+}
+
+.emcima{
+  width: 100%;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  .bt-fechar{
+    position: absolute;
+    right:4vw;
+    font-size: 34px;
+    top: 2vh;
+    color: #E55242;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+  }
+  iframe{
+    width: 80%;
+    height: 63%;
+    margin: 11% auto;
+    display: block;
+
+  }
+}
+/////////////////
+
+.imprensa{
+  .texto{
+    padding: 7% 0;
+    h1{
+      font-family: Monument Extended;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      color:#003C56;
+      @include breakpoint($desktop){
+        font-size: 30px;
+      }
+    }
+  }
+  .blocos{
+    position: relative;
+    @include flex;
+    width: 100%;
+    margin: 0 auto;
+
+    .bloco{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      @include flex;
+
+      @include breakpoint($desktop){
+          width: 100%;
+          &:nth-child(2n){
+            .descricao{
+              background:  #024A67;
+              order: 1;
+            }
+            img{
+              order: 2;
+            }
+          }
+      }
+      img{
+        transition: width ease .2s;
+        width: 100%;
+        @include breakpoint($desktop){
+            width: 40%;
+        }
+      }
+      .descricao{
+        transition: width ease .2s;
+        background: #E55242;
+        width: 100%;
+        @include flex;
+        @include breakpoint($desktop){
+            width: 60%;
+        }
+        order: 2;
+        display: flex;
+        h2{
+            align-self: center;
+            margin: 0 5%;
+            padding: 5% 0;
+            font-family: Raleway;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 40px;
+              color: #FFFFFF;
+              width: 100%;
+              @include breakpoint($desktop){
+                padding: 0;
+              }
+        }
+        p{
+          padding-bottom: 10%;
+          margin: 0 5%;
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 120%;
+          /* or 24px */
+          display: block;
+
+
+            color: #FFFFFF;
+
+          mix-blend-mode: normal;
+          opacity: 0.8;
+            width: 100%;
+            @include breakpoint($desktop){
+              padding: 0;
+            }
+            &:last-child{
+              text-align: right;
+              padding-bottom: 7%;
+              font-size: 14px;
+              align-self: center;
+              @include breakpoint($desktop){
+                padding: 0;
+              }
+            }
+        }
+      }
+
+      &:nth-child(2n){
+        .descricao{
+          background:  #024A67;
+        }
+      }
+      &:nth-child(3n){
+        .descricao{
+          background:   #F7F4E8;
+            h2{
+                color:  #003C56;
+            }
+            p{
+              color:  #003C56;
+            }
+        }
+
+      }
+      &:nth-child(4n){
+        .descricao{
+          background: #E55242;
+            h2{
+                  color: #FFFFFF;
+            }
+            p{
+              color: #FFFFFF;
+            }
+        }
+
+      }
+      &:hover{
+        .descricao{
+          width:55%;
+        }
+        img{
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+///////////
+.noticia{
+  width: 85%;
+  margin:0 auto;
+  .image{
+    img{
+
+    }
+  }
+  .texto{
+    h1{
+      padding-top: 11%;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 40px;
+      color: #003C56;
+    }
+    p{
+      padding: 5% 0;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      /* or 24px */
+      display: block;
+
+
+      color: #003C56;
+
+      mix-blend-mode: normal;
+      opacity: 0.8;
+    }
+  }
+}
+//////////////
+.owl-carousel.owl-loaded {
+    display: block;
+    position: relative;
+}
+.owl-dots {
+  position: absolute;
+  bottom: 58px;
+  text-align: center;
+  padding-top: 15px;
+  right: 48%;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: rgba(0, 60, 86, 0.48);
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: rgba(0, 60, 86, 1);
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-item{
+  margin-right: 0;
+}

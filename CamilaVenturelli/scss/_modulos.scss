@@ -1,0 +1,757 @@
+.corpo{
+  width: 100%;
+  @include breakpoint($desktop){
+    width:85%;
+    margin-left: auto;
+  }
+  a{
+    cursor: pointer !important;
+  }
+  .grupo{
+    width: 90%;
+    margin: 0 auto;
+    @include flex;
+    padding-top: 55px;
+    padding-bottom: 69px;
+    .img-posts{
+      width: 100%;
+      @include breakpoint($desktop){
+      width: 33%;
+
+      }
+      img{
+        cursor: pointer;
+      }
+      .poster{
+        position: fixed;
+        display: none;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        overflow-y: scroll;
+        .corpo-interna{
+          .fecchaposter{
+            position: absolute;
+            right: 13vw;
+            font-size: 34px;
+            top: 2vh;
+            background: inherit;
+            border: none;
+            color: inherit;
+
+          }
+          .topo{
+            margin: 0 auto;
+            width: 85%;
+          }
+          .grid{
+            margin-left: 0;
+            margin: 0 auto;
+            width: 85%;
+            padding-bottom: 55px;
+            .elemento.hashs{
+              justify-content: flex-start;
+            }
+          }
+        }
+      }
+    }
+
+    .faixa{
+      width:100%;
+      //display: flex;
+      padding-bottom: 15px;
+      @include flex;
+      .conjunto{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        color: inherit;
+        padding-top: 15px;
+        @include breakpoint($desktop){
+          width: 22%;
+          @include flex;
+          justify-content: center;
+          padding-top: 0;
+        }
+        img{
+          width:57px;
+          height: 57px;
+
+        }
+        p{
+          font-family: $libre;
+          font-size: 22px;
+          line-height: 30px;
+          width:50%;
+        }
+      &.left{
+
+          p{
+            order: 1;
+          }
+          img{
+            order:2;
+              margin-right: auto;
+            @include breakpoint($desktop){
+              margin-right: 0;
+            }
+
+
+          }
+
+
+      }
+      &.right{
+
+        p{
+          order: 2
+        }
+        img{
+          order:1;
+          margin-left: auto;
+          @include breakpoint($desktop){
+            margin-left: 0;
+          }
+        }
+
+
+      }
+      &.top{
+        p{
+          @include breakpoint($desktop){
+          padding-bottom:  20%;
+          }
+        }
+
+      }
+      &.bottom{
+        p{
+          padding-top:10%;
+        }
+      }
+      }
+    &:nth-child(1){
+
+      @include breakpoint($desktop){
+        width: 76%;
+      }
+
+      .conjunto{
+        width: 100%;
+        @include breakpoint($desktop){
+          width: 26%;
+        }
+
+        p{
+          width: auto;
+        }
+      }
+    }
+    &:nth-child(2){
+      padding-bottom: 30px;
+      margin-left: auto;
+      @include breakpoint($desktop){
+        width:77%;
+      }
+      .conjunto{
+        width: auto;
+        p{
+          width: 50%;
+        }
+      }
+    }
+    &:nth-child(3){
+      width:100%;
+      margin-left: auto;
+      .conjunto{
+
+      }
+    }
+    }
+
+  }
+  .rodape{
+    @include flex;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    width: 90%;
+    margin: 0 auto;
+    .elemento{
+      width: 100%;
+      padding-bottom: 15px;
+      @include breakpoint($desktop){
+      width: auto;
+      align-self: center;
+    }
+      button{
+        background: inherit;
+        border: none;
+        color: inherit;
+      }
+      img{
+
+      }
+      p{
+        width: 100%;
+          @include breakpoint($desktop){
+          width: 62%;
+          margin: 0 auto;
+        }
+      }
+      .classe-hash{
+        position: fixed;
+        display: none;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        overflow-y: scroll;
+        .corpo-interna{
+          width: 100%;
+            @include breakpoint($desktop){
+              width: 85%;
+            }
+          .topo{
+            @include flex;
+            @include breakpoint($desktop){
+              width:85%;
+              margin-left: 0;
+              margin: 0 auto;
+              padding-top: 66px;
+
+
+            }
+            h1{
+              font-family: $libre;
+              font-size: 21px;
+              line-height: 34px;
+              width: 100%;
+              padding-bottom: 55px;
+              @include breakpoint($desktop){
+                font-size: 52px;
+                line-height: 72px;
+              }
+
+            }
+
+
+          }
+        }
+        button{
+          position: absolute;
+          right: 3vw;
+          font-size: 34px;
+          top: 2vh;
+          @include breakpoint($desktop){
+            right: 13vw;
+          }
+        }
+        .topo{
+          h1{
+            font-family: $libre;
+            font-size: 21px;
+            line-height: 34px;
+            width: 100%;
+            padding-bottom: 55px;
+            @include breakpoint($desktop){
+              font-size: 52px;
+              line-height: 72px;
+            }
+
+          }
+        }
+        .grid{
+          margin-left: 0;
+          margin: 0 auto;
+          width: 85%;
+              padding-bottom: 55px;
+          .video{
+            width: 85%;
+          }
+        }
+
+      }
+      &.hashs{
+        align-self: flex-start;
+        display: flex;
+
+        .hash-fit{
+          width: auto;
+          button{
+            cursor: help;
+          }
+        }
+      }
+    }
+    button{
+      font-family: $nuno;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      margin:  5px;
+      border: none;
+      text-transform: lowercase;
+
+
+    }
+    &:not(:last-child){
+      padding-bottom: 0;
+    }
+  }
+}
+.verde{
+  color: #20519E;
+  background-color: #91CEC6;
+
+}
+.branco{
+  color: #EB634E;
+  background-color: white;
+}
+.azul{
+  color: #F7C9DA;
+  background-color: #20519E;
+}
+.roxo{
+  color: white;
+  background-color: #C18DBE;
+}
+.laranja{
+  color: #F7C9DA;
+  background-color: #EB634E;
+}
+/////////////////////////////////////////////internas
+.corpo-interna{
+  a{
+    cursor: crosshair !important;
+  }
+  width: 85%;
+    margin: 0 auto;
+    padding-top: 66px;
+  @include breakpoint($desktop){
+    width:85%;
+    margin-left: auto;
+    padding-top: 55px
+
+  }
+  .topo{
+    @include flex;
+    @include breakpoint($desktop){
+      width:85%;
+      margin-left: auto;
+      padding-top: 66px
+
+    }
+    h1{
+      font-family: $libre;
+      font-size: 21px;
+      line-height: 34px;
+      width: 100%;
+      padding-bottom: 55px;
+      @include breakpoint($desktop){
+        font-size: 52px;
+        line-height: 72px;
+      }
+
+    }
+
+
+  }
+  .grid{
+    @include flex;
+
+    @include breakpoint($desktop){
+    width: 85%;
+    margin-left: auto;
+  }
+    .titulo{
+      width: 100%;
+      @include breakpoint($desktop){
+      width: 42%;
+      }
+      h2{
+        font-family: $libre;
+        font-size: 16px;
+        line-height: 30px;
+        width: 64%;
+        padding-bottom: 55px;
+        @include breakpoint($desktop){
+          font-size: 22px;
+          line-height: 40px;
+        }
+      }
+      p{
+        font-family: $nuno;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+    .texto{
+      width: 100%;
+
+
+      @include breakpoint($desktop){
+      width: 50%;
+      //margin: 0 auto;
+      align-self: center;
+      padding-bottom: 77px;
+
+    }
+    @include breakpoint($bigDesktop){
+      padding-bottom: 212px;
+    }
+    a{
+      text-decoration: underline;
+    /* background: black; */
+    color: magenta;
+    }
+    p{
+      font-family: $nuno;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 28px;
+      width:100%;
+      padding-bottom: 15px;
+        @include breakpoint($desktop){
+        width: 77%;
+        margin: 0 auto;
+      }
+    }
+    h2{
+      font-family: $nuno;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 32px;
+      width:100%;
+      padding-bottom: 15px;
+        @include breakpoint($desktop){
+        width: 77%;
+        margin: 0 auto;
+      }
+    }
+    h1{
+      font-family: $libre;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 32px;
+      width:100%;
+      padding-bottom: 15px;
+        @include breakpoint($desktop){
+        width: 77%;
+        margin: 0 auto;
+      }
+    }
+  }
+  a{
+    &.elemento{
+      position: relative;
+        &:after{
+          position: absolute;
+          bottom: 15px;
+          left: 5%;
+          width: 90%;
+          height: 50%;
+          z-index: 1;
+          content: '';
+          display: block;
+            background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+            background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00202020', endColorstr='#202020',GradientType=0 );
+          }
+
+      p{
+        position: absolute;
+        bottom: 12%;
+        color: white;
+        z-index: 2;
+        left: 10%;
+      }
+      img{
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+  }
+    .elemento{
+      width: 100%;
+      padding-bottom: 15px;
+      @include breakpoint($desktop){
+      width: 50%;
+      align-self: center;
+    }
+
+      button{
+        background: inherit;
+        border: none;
+        color: inherit;
+      }
+      img{
+
+      }
+      p{
+        width: 100%;
+          @include breakpoint($desktop){
+          width: 62%;
+          margin: 0 auto;
+        }
+      }
+      .classe-hash{
+        position: fixed;
+        display: none;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.85);
+        overflow-y: scroll;
+        button{
+          position: absolute;
+          right: 13vw;
+          font-size: 34px;
+          top: 2vh;
+
+        }
+        .topo{
+          h1{
+            font-family: $libre;
+            font-size: 21px;
+            line-height: 34px;
+            width: 100%;
+            padding-bottom: 55px;
+            @include breakpoint($desktop){
+              font-size: 52px;
+              line-height: 72px;
+            }
+
+          }
+        }
+        .grid{
+          margin-left: 0;
+          margin: 0 auto;
+          width: 85%;
+              padding-bottom: 55px;
+          .video{
+            width: 85%;
+          }
+        }
+
+      }
+      &.hashs{
+        align-self: flex-start;
+        @include flex;
+        width: 14%!important;
+        .hash-fit{
+          width: auto;
+          button{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .video{
+      width: 100%;
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+        margin-top: 6vh;
+      iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .padlet{
+      width: 100%;
+      img{
+        width: auto;
+        height: auto;
+      }
+    }
+    .flecha{
+        position: absolute;
+        top: 4vh;
+          @include breakpoint($desktop){
+            top: 4vh;
+              left: 20vw;
+
+              z-index: 999;
+          }
+
+
+      button{
+        background: inherit;
+        border: none;
+        color: inherit;
+      }
+    }
+  }
+}
+////////////////// corpo-home
+.corpo-home{
+  width: 100%;
+  @include breakpoint($desktop){
+    width:85%;
+    margin-left: auto;
+    padding-top: 5%;
+  }
+  .grid{
+    @include flex;
+
+    @include breakpoint($desktop){
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    div{
+      &.elemento{
+        position: relative;
+        width: 100%;
+        padding-bottom: 15px;
+        @include breakpoint($desktop){
+        width: 25%;
+        align-self: center;
+      }
+      }
+    }
+    a{
+        display: block;
+      &.elemento{
+        position: relative;
+        width: 100%;
+        padding-bottom: 15px;
+
+        @include breakpoint($desktop){
+        width: 25%;
+        align-self: center;
+      }
+
+        &:after{
+          transition: opacity ease .8s;
+          position: absolute;
+          bottom: 15px;
+          left: 5%;
+          width: 90%;
+          height: 50%;
+          z-index: 1;
+          opacity: 0;
+          content: '';
+          display: none;
+            background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+            background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00202020', endColorstr='#202020',GradientType=0 );
+          }
+
+        img{
+            display: block;
+            width: 90%;
+            margin: 0 auto;
+            opacity: 1;
+            transition: opacity ease .8s;
+        }
+        .reveal{
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          opacity: 0;
+          transition: opacity ease .8s;
+          p{
+            position: absolute;
+            bottom: 12%;
+            color: black;
+            z-index: 2;
+            left: 10%;
+            display: block;
+          }
+          img{
+            z-index: 2;
+          }
+        }
+        &:hover{
+          .reveal{
+            opacity:1;
+            .sec{
+              opacity:1;
+            }
+          }
+          img{
+            opacity: 0;
+          }
+
+          &:after{
+            opacity:1;
+          }
+        }
+      }
+
+    }
+  }
+}
+////////////////////Contato
+.corpo-contato{
+  width: 100%;
+  @include breakpoint($desktop){
+    width:85%;
+    margin-left: auto;
+    padding-top: 5%;
+  }
+  .grid{
+    @include flex;
+
+    @include breakpoint($desktop){
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .elemento{
+      display: flex;
+      width: 50%;
+      img{
+        width: 85%;
+
+      }
+      .social{
+        align-self: center;
+        margin: 0 auto;
+        p{
+          font-family: $nuno;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 25px;
+        }
+        .media{
+          padding-top: 15%;
+          @include flex;
+          a{
+            width: auto;
+            img{
+                width: 32px;
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+}

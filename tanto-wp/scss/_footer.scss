@@ -1,0 +1,67 @@
+footer{
+  width: 100%;
+  height: auto;
+  background-color: #E55242;
+  @include flex;
+  .footer-block{
+    width:95%;
+    margin: 0 auto;
+    color: white;
+    @include flex;
+    .logos{
+      @include flex;
+      padding: 1% 0;
+      @include breakpoint($desktop){
+
+      }
+      img{
+        width: 34px;
+
+          @include breakpoint($desktop){
+            width:40px;
+          }
+      }
+    }
+    .texto{
+      @include flex;
+      width: 75%;
+    
+      @include breakpoint($desktop){
+        width:75vw;
+        margin: 0 auto;
+      }
+      h2{
+        font-style: normal;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 20px;
+        align-self: center;
+        order: 1;
+        width: 100%;
+        text-align: center;
+        @include breakpoint($desktop){
+          width:auto;
+          order: unset;
+            font-size: 20px;
+              line-height: 40px;
+        }
+      }
+      p{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 5px;
+        line-height: 12px;
+        order: 2;
+        align-self: center;
+        width: 45%;
+        text-align: center;
+        @include breakpoint($desktop){
+          font-size: 14px;
+          width:auto;
+          order: unset;
+        }
+      }
+    }
+  }
+
+}

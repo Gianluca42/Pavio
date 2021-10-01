@@ -1,0 +1,107 @@
+//===|VARIÁVEIS|===//
+//cores//
+$azul: #192637;
+$salmao: #E48E7F;
+$bege: #FFF8E8;
+
+// breakpoint //
+$smallMobile: 320px;
+$mobile: 560px;
+$tablet: 700px;
+$desktop: 990px;
+$medDesktop: 1240px;
+$bigDesktop: 1440px;
+$maxDesktop: 1920px;
+
+// fontes //
+$nuno:'Nunito', sans-serif;
+$libre: new-spirit, serif;
+
+@mixin t-h1{
+  font-size: 30px;
+  line-height: 35px;
+  @include breakpoint($desktop){
+    font-size: 38px;
+    line-height: 42px;
+  }
+}
+
+@mixin t-subtitulo{
+  font-size: 20px;
+    line-height: 26px;
+  @include breakpoint($desktop){
+    font-size: 23px;
+    line-height: 30px;
+  }
+}
+
+@mixin flex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@mixin flex-block{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+//===|GERAIS|===//
+html{
+  // scroll-behavior: smooth;
+}
+body{
+  font-family: $nuno;
+  margin: 0!important;
+
+  &.fixed{
+    overflow: hidden;
+  }
+}
+main{
+  min-height: 100vh;
+  @include breakpoint($desktop){
+    min-height: 100vh;
+  }
+}
+img, video{
+  width: 100%;
+  display: block;
+}
+img{
+  height: auto;
+}
+strong, b{
+  font-weight: bold;
+}
+em{
+  font-style: italic;
+}
+a{
+  text-decoration: none;
+}
+.wrapper{
+  margin: 0 auto;
+  width: 90%;
+}
+.ir{
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+
+//controle idiomas
+
+.lang-btn{
+  button{
+    opacity: .5;
+    transition: opacity ease .8s;
+    &.active{
+      opacity: 1;
+    }
+  }
+}
+
+.multi-lang:not(.lang-pt){
+  display: none;
+}
